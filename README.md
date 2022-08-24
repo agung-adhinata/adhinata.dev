@@ -15,9 +15,9 @@ menulis dengan cepat dan efisien
 
 ### 1. Sandboxing
 
-My apps or private backend that serve as subdomain will host using my beloved-and-old-reliable Android Phone. With SD636 SOC and 3GB of RAM in it, that should be fine for handling decent request arund 50 user/second due to internet quota limitation.
+My apps or a private backend that serve as a subdomain will host using my beloved-and-old-reliable Android Phone. With SD636 SOC and 3GB of RAM in it, that should be fine for handling decent requests around 50 users/second due to internet quota limitation.
 
-But for ready production backend or apps that will handle more than 100 request per second, I will use either my beefy PC or online paid VPS such as Azure, Google Cloud, or AWS (not priority, i'm prefer free VPS if available).
+But for ready production backend or apps that will handle more than 100 requests per second, I will use either my beefy PC or online paid VPS such as Azure, Google Cloud, or AWS (not priority, I prefer free VPS if available).
 
 ### 2. Personal Web
 
@@ -27,18 +27,18 @@ Then, my public personal website that using main domain will be hosted online us
 
 This is some feature that I will add to my website:
 
-- Portofolio, wiht link to my social media account.
+- Portofolio, with link to my social media account.
 - Better font readability
 - Low end mobile, and slow connection friendly
 - Better SEO
 
 ## Prototype
 
-This website (domain, and subdomain) using Cloudlfare as Domain management.
+This website (domain, and subdomain) using CloudFlare as Domain management.
 Want to see the prototype? [just click this figma link](https://www.figma.com/file/WBoUkdcb0IzCNZtGtgJxN6/adhinata.dev?node-id=952%3A2)!
 
-- Front End :
-  - React -> mainly for front end
+- Frontend:
+  - React -> mainly for frontend
   - Scss -> styling
   - TODO: add it later
 - Back End :
