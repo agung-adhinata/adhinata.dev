@@ -11,7 +11,6 @@ This section includes about all of the things that related to this website proje
 ## Web and Domain Design Goals
 
 This website is designed to provide two things, **sandboxing** my program using the subdomain of this domain, and creating a good **personal web** at `adhinata.dev` that can be accessible to anyone who wants to know about me.
-menulis dengan cepat dan efisien
 
 ### 1. Sandboxing
 
@@ -21,13 +20,13 @@ But for ready production backend or apps that will handle more than 100 requests
 
 ### 2. Personal Web
 
-Then, my public personal website that using main domain will be hosted online using an additional free provider like Netlify, Github Pages, or Vercel (priority). This conclution choosed by two things. First, flexibility to develop website from anywhere, thanks for CI/CD from Github/Gilab. Second, reserving my monthly internet quota.
+Then, my public personal website that using main domain will be hosted online using an additional free provider like Netlify, Github Pages, or Vercel (priority). This conclusion chooses by two things. First, flexibility to develop website from anywhere, thanks for CI/CD from Github/GitLab. Second, reserving my monthly internet quota.
 
 ## Features
 
 This is some feature that I will add to my website:
 
-- Portofolio, with link to my social media account.
+- Portfolio, with link to my social media account.
 - Better font readability
 - Low end mobile, and slow connection friendly
 - Better SEO
