@@ -1,0 +1,155 @@
+/* Css global */
+
+:root {
+  /* Color */
+  --color-gray: #002000;
+  --color-background: #171717;
+  --color-surface-0: #232323;
+  --color-accent: #EAB308;
+  --color-foreground: #E2E2E2;
+  --color-gray: #9CA3AF;
+
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter', sans-serif;
+}
+
+code,
+a,
+p,
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+/* type-scale.com */
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+/* Header */
+
+
+header,
+header nav,
+header ul,
+.header-inner {
+  display: flex;
+}
+
+header {
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  font-size: 1.1em;
+}
+
+.header-inner {
+  width: 900px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.logo__wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4em;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+header nav {
+  justify-content: space-between;
+}
+
+header ul {
+  text-decoration: none;
+  list-style: none;
+  gap: 1.5em;
+  padding: 0;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--color-foreground);
+}
+
+
+/* Main */
+
+main {
+  padding: 0 1.5rem;
+}
+
+/* sections */
+
+/* 1. Hero Section */
