@@ -239,7 +239,7 @@ main {
 /* 2. Project Section */
 
 .project-section__outer {
-  margin-top: 3rem;
+  margin-top: 6rem;
   padding: 0em 2rem;
 }
 
@@ -291,19 +291,23 @@ main {
 }
 
 .project-section .item-list {
-  padding: 1px;
+  gap:1em;
+  padding: 1em 0;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  overflow: hidden;
 }
 
 .project-section .item-card {
   background-color: var(--color-surface-0);
   color: var(--color-foreground);
-  margin-bottom: 1em;
   padding: 1em 1rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  min-height: 10em;
+  min-height: 12em;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .item-card__title {
@@ -316,5 +320,14 @@ main {
   }
   .section-hero {
     padding: 2em 3rem;
+  }
+  .project-section .item-list {
+    grid-template-columns: 1fr;
+  }
+  .project-section .item-card {
+    min-height: 7em;
+  }
+  .project-section__outer {
+    padding: 0;
   }
 }
