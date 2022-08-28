@@ -2,7 +2,6 @@
 
 :root {
   /* Color */
-  --color-gray: #002000;
   --color-background: #171717;
   --color-surface-0: #232323;
   --color-accent: #EAB308;
@@ -207,6 +206,7 @@ main {
 
 .section-hero .subtitle {
   font-weight: bold;
+  color: var(--color-gray);
 }
 
 .section-hero__small-bar {
