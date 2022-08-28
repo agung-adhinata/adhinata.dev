@@ -311,6 +311,9 @@ main {
 }
 
 @media only screen and (max-width: 720px) {
+  html {
+    font-size: 85%;
+  }
   .section-hero {
     padding: 2em 3rem;
   }
