@@ -4,14 +4,13 @@
   /* Color */
   --color-background: #171717;
   --color-surface-0: #232323;
-  --color-accent: #EAB308;
-  --color-foreground: #E2E2E2;
-  --color-gray: #9CA3AF;
+  --color-accent: #eab308;
+  --color-foreground: #e2e2e2;
+  --color-gray: #9ca3af;
 
   /* Breakpoint */
   --display-laptop: 992px;
   --display-tablet: 768px;
-
 }
 
 * {
@@ -28,6 +27,7 @@ html {
 body {
   padding: 0;
   margin: 0;
+  font-family: "JetBrains Mono", monospace;
 }
 
 h1,
@@ -37,14 +37,11 @@ h4,
 h5,
 h6,
 .font-sans {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-code,
-a,
-p,
 .font-mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
 }
 
 a {
@@ -85,27 +82,34 @@ h2,
 }
 
 h3,
+.text-xl,
 .text-x-large {
   font-size: 1.953rem;
 }
 
 h4,
+.text-lg,
 .text-large {
   font-size: 1.563rem;
 }
 
 h5,
+.text-md,
 .text-medium {
   font-size: 1.25rem;
 }
 
+p {
+  font-size: 1rem;
+}
+
 small,
-.text_small {
+.text-sm,
+.text-small {
   font-size: 0.8rem;
 }
 
 /* Header */
-
 
 header,
 header nav,
@@ -142,7 +146,7 @@ header {
   margin: 0;
   padding: 0;
   font-size: 1.4em;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
 }
 
 header nav {
@@ -164,7 +168,6 @@ header a {
 header a:hover {
   color: var(--color-accent);
 }
-
 
 /* Main */
 
@@ -218,9 +221,6 @@ main {
   border-radius: 20px;
   position: absolute;
   top: -2.4em;
-}
-
-.section-hero__small-bar a {
   color: var(--color-background);
   font-weight: bold;
 }
