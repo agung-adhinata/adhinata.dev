@@ -159,6 +159,10 @@ header a {
   color: var(--color-foreground);
 }
 
+header a:hover {
+  color: var(--color-accent);
+}
+
 
 /* Main */
 
