@@ -21,7 +21,7 @@
 
 html {
   scroll-padding-top: 4rem;
-  font-size: 100%;
+  font-size: 95%;
   background-color: var(--color-background);
   color: var(--color-foreground);
 }
@@ -220,6 +220,7 @@ main {
   background-color: var(--color-accent);
   padding: 1em 2rem;
   display: flex;
+  flex-direction: row;
   gap: 2rem;
   border: solid 10px var(--color-background);
   border-radius: 20px;
@@ -257,20 +258,6 @@ main {
 .project-section ul {
   padding: 0;
 }
-
-.project-section .link-list {
-  display: flex;
-  gap: 1em;
-}
-
-.project-section .link-list a {
-  color: var(--color-gray);
-}
-.project-section .link-list a:hover {
-  color: var(--color-accent);
-}
-
-
 
 .project-section .header {
   display: flex;
@@ -310,9 +297,30 @@ main {
   overflow: hidden;
 }
 
+.item-card p {
+  font-size: 0.8em;
+}
+
 .item-card__title {
   font-weight: bold;
 }
+
+.item-card__description {
+  padding: 0.5em 0;
+}
+
+.project-section .link-list {
+  display: flex;
+  gap: 1em;
+}
+
+.project-section .link-list a {
+  color: var(--color-gray);
+}
+.project-section .link-list a:hover {
+  color: var(--color-accent);
+}
+
 
 @media only screen and (max-width: 720px) {
   html {
@@ -329,5 +337,8 @@ main {
   }
   .project-section__outer {
     padding: 0;
+  }
+  .section-hero__small-bar {
+    overflow: hidden;
   }
 }
