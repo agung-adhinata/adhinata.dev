@@ -8,6 +8,8 @@
   --color-foreground: #e2e2e2;
   --color-gray: #9ca3af;
 
+  /* Rounded */
+
   /* Breakpoint */
   --display-laptop: 992px;
   --display-tablet: 768px;
@@ -230,4 +232,74 @@ main {
   justify-content: center;
   height: fit-content;
   position: relative;
+}
+
+/* 2. Project Section */
+
+.project-section__outer {
+  margin-top: 3rem;
+  padding: 0em 2rem;
+}
+
+.project-section {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  padding: 0em 1rem;
+  border-radius: 1rem;
+}
+.project-section * {
+  margin: 0;
+  list-style: none;
+}
+
+.project-section ul {
+  padding: 0;
+}
+
+.project-section .link-list {
+  display: flex;
+  gap: 1em;
+}
+
+.project-section .link-list a {
+  color: var(--color-gray);
+}
+.project-section .link-list a:hover {
+  color: var(--color-accent);
+}
+
+
+
+.project-section .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em 0;
+}
+
+.project-section .header a {
+  color: var(--color-background);
+  display: inherit;
+  font-weight: bold;
+}
+.project-section .header .title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.project-section .item-list {
+  padding: 1em 0;
+}
+
+.project-section .item-card {
+  background-color: var(--color-surface-0);
+  color: var(--color-foreground);
+  margin-bottom: 1em;
+  padding: 1em 1rem;
+  border-radius: 1rem;
+}
+
+.item-card__title {
+  font-weight: bold;
 }
