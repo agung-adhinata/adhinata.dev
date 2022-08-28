@@ -185,9 +185,11 @@ main {
 
 .section-hero {
   border: solid 2px var(--color-accent);
-  border-radius: 16px;
+  border-radius: 1rem;
   padding: 3em 6rem;
 }
+
+
 
 .section-hero__outer {
   padding-top: 20vh;
@@ -298,8 +300,18 @@ main {
   margin-bottom: 1em;
   padding: 1em 1rem;
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 10em;
+  justify-content: space-between;
 }
 
 .item-card__title {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 720px) {
+  .section-hero {
+    padding: 2em 3rem;
+  }
 }
