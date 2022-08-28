@@ -1,4 +1,4 @@
-/* Css global */
+/* Css global Reset */
 
 :root {
   /* Color */
@@ -55,6 +55,14 @@ a:hover {
   color: var(--color-foreground);
 }
 
+/* Global class */
+
+.anchor::before {
+  display: block;
+  position: relative;
+  top: -12em;
+  visibility: hidden;
+}
 
 /* type-scale.com */
 
@@ -120,6 +128,7 @@ header {
   font-size: 1.1em;
   position: fixed;
   background-color: var(--color-background);
+  z-index: 700;
 }
 
 .header-inner {
