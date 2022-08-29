@@ -56,6 +56,26 @@ a:hover {
 
 /* Global class */
 
+.button {
+  padding: 1em 2em;
+  font-size: 1.25em;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+}
+.button__primary {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+}
+.button__primary:hover {
+  background-color: var(--color-foreground);
+}
+a.button__primary:hover{
+  color: var(--color-background);
+}
+
 /* type-scale.com */
 
 p {
@@ -319,6 +339,37 @@ main {
 }
 .project-section .link-list a:hover {
   color: var(--color-accent);
+}
+
+/* Contact Section */
+.section-contact__outer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-contact {
+  width: 100%;
+  align-items: center;
+}
+
+.section-contact h2 {
+  margin: 0;
+}
+/* aside */
+aside {
+  display: flex;
+  justify-content: center;
+  gap:1rem;
+}
+
+/* Footer */
+
+footer {
+  display:  flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
