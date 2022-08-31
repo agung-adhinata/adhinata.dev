@@ -13,6 +13,16 @@
   /* Breakpoint */
   --display-laptop: 992px;
   --display-tablet: 768px;
+
+  /* typography */
+  --text-3xl: 3.052rem;
+  --text-2xl: 2.441rem;
+  --text-xl: 1.953rem;
+  --text-lg: 1.563rem;
+  --text-md: 1.25rem;
+  --text-base: 1rem;
+  --text-sm: 0.8rem;
+
 }
 
 * {
@@ -58,7 +68,7 @@ a:hover {
 
 .button {
   padding: 1em 2em;
-  font-size: 1.25em;
+  font-size: var(--text-lg);
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -95,30 +105,30 @@ h5 {
 h1,
 .text-3x-large {
   margin-top: 0;
-  font-size: 3.052rem;
+  font-size: var(--text-3xl);
 }
 
 h2,
 .text-2x-large {
-  font-size: 2.441rem;
+  font-size: var(--text-2xl);
 }
 
 h3,
 .text-xl,
 .text-x-large {
-  font-size: 1.953rem;
+  font-size: var(--text-xl);
 }
 
 h4,
 .text-lg,
 .text-large {
-  font-size: 1.563rem;
+  font-size: var(--text-md);
 }
 
 h5,
 .text-md,
 .text-medium {
-  font-size: 1.25rem;
+  font-size: var(--text-base);
 }
 
 p {
@@ -128,7 +138,7 @@ p {
 small,
 .text-sm,
 .text-small {
-  font-size: 0.8rem;
+  font-size: var(--text-sm);
 }
 
 /* Header */
@@ -352,17 +362,38 @@ main {
 .section-contact {
   width: 100%;
   align-items: center;
+  padding: 0 2em;
 }
 
 .section-contact h2 {
   margin: 0;
 }
 /* aside */
-aside {
+
+.aside-icon__wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap:1rem;
+  max-width: var(--display-tablet);
+  margin: auto;
+  position: fixed;
+  bottom: 2rem;
+  left: 1rem;
+
 }
+
+.aside-icon__icon {
+  color: var(--color-gray);
+  font-size: var(--text-lg);
+}
+.aside-icon__icon:first-child {
+  color: var(--color-foreground);
+}
+.aside-icon__icon:last-child {
+  color: var(--color-surface-0);
+}
+
+
 
 /* Footer */
 
@@ -391,5 +422,10 @@ footer {
   }
   .section-hero__small-bar {
     overflow: hidden;
+  }
+  .aside-icon__wrapper {
+    position: relative;
+    justify-content: center;
+    flex-direction: row;
   }
 }
