@@ -371,7 +371,7 @@ main {
 /* aside */
 
 aside {
-  width: var(--display-tablet);
+  width: calc(var(--display-tablet) + 2rem);
   position: fixed;
   display: flex;
   left: 0;
@@ -384,15 +384,16 @@ aside {
 .aside-icon__wrapper {
   display: flex;
   flex-direction: column;
-  gap:1rem;
   position: relative;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .aside-icon__icon {
   color: var(--color-gray);
   font-size: var(--text-lg);
   pointer-events: auto;
+  padding: 1rem;
+  transition: color 150ms ease-in-out;
 }
 .aside-icon__icon:first-child {
   color: var(--color-foreground);
