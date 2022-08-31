@@ -389,9 +389,6 @@ main {
 .aside-icon__icon:first-child {
   color: var(--color-foreground);
 }
-.aside-icon__icon:last-child {
-  color: var(--color-surface-0);
-}
 
 
 
