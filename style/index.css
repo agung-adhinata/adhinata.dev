@@ -22,7 +22,6 @@
   --text-md: 1.25rem;
   --text-base: 1rem;
   --text-sm: 0.8rem;
-
 }
 
 * {
@@ -67,7 +66,7 @@ a:hover {
 /* Global class */
 
 .button {
-  padding: 1em 2em;
+  padding: 0.75em 1em;
   font-size: var(--text-md);
   text-decoration: none;
   display: flex;
@@ -82,7 +81,7 @@ a:hover {
 .button__primary:hover {
   background-color: var(--color-foreground);
 }
-a.button__primary:hover{
+a.button__primary:hover {
   color: var(--color-background);
 }
 
@@ -219,8 +218,6 @@ main {
   padding: 3em 6rem;
 }
 
-
-
 .section-hero__outer {
   padding-top: 20vh;
 }
@@ -308,10 +305,10 @@ main {
 }
 
 .project-section .item-list {
-  gap:1em;
+  gap: 1em;
   padding: 1em 0;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
 }
 
@@ -371,7 +368,7 @@ main {
 /* aside */
 
 aside {
-  width: calc(var(--display-tablet) + 2rem);
+  width: calc(var(--display-tablet) + 1.5rem);
   position: fixed;
   display: flex;
   left: 0;
@@ -385,7 +382,7 @@ aside {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .aside-icon__icon {
@@ -399,16 +396,13 @@ aside {
   color: var(--color-foreground);
 }
 
-
-
 /* Footer */
 
 footer {
-  display:  flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 
 @media only screen and (max-width: 720px) {
   html {
