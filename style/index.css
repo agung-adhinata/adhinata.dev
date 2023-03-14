@@ -439,11 +439,14 @@ footer {
   .section-hero__small-bar {
     overflow: hidden;
   }
-  aside {
+  .aside__left {
     position: relative;
     width: 100%;
     justify-content: center;
     margin: 0;
+  }
+  .aside__right {
+    width: 100%;
   }
   .aside-icon__wrapper {
     padding: 0;
