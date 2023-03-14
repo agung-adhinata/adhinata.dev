@@ -370,13 +370,28 @@ main {
 /* aside */
 
 aside {
-  width: calc(var(--display-tablet) + 1.5rem);
+}
+
+.aside__left {
+  bottom: 0;
   position: fixed;
   display: flex;
+  width: calc(var(--display-tablet) + 1.5rem);
   left: 0;
   right: 0;
-  bottom: 0;
   margin: 0 auto;
+  pointer-events: none;
+}
+
+.aside__right {
+  right: 0;
+  left: 0;
+  position: fixed;
+  bottom: 0;
+  width: var(--display-tablet);
+  margin: 0 auto;
+  display: flex;
+  justify-content: end;
   pointer-events: none;
 }
 
