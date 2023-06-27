@@ -20,7 +20,7 @@ export default function Home() {
 								{" "}
 								Agung Adhinata
 							</strong>
-							, I'm self taught developer. My objective is to
+							, I&apos;m self taught developer. My objective is to
 							broaden my skills and my experience about technology
 							including ecosystem such as creating fun and
 							functional games and application, and understanding
