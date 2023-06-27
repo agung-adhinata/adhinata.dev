@@ -1,5 +1,6 @@
 import Link from "next/link";
 import DarkModeToggle from "@/components/molecule/DarkModeToggle";
+import { JetBrains_Mono } from "next/font/google";
 
 const navLists = [
 	{ name: "Contact", href: "/contact" },
@@ -16,9 +17,10 @@ export default function Navbar() {
 					</span>
 				</p>
 				<section className="inline-flex items-center gap-4">
-					{navLists.map((item) => (
+					{navLists.map((item, key) => (
 						<>
 							<Link
+								key={key}
 								className="font-sans decoration-amber-600 underline-offset-2 hover:underline dark:decoration-amber-400"
 								href={item.href}
 							>
