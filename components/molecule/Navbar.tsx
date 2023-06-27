@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "@/components/atom/Button";
+import DarkModeToggle from "@/components/molecule/DarkModeToggle";
 
 const navLists = [
 	{ name: "Contact", href: "/contact" },
@@ -8,22 +8,25 @@ const navLists = [
 export default function Navbar() {
 	return (
 		<>
-			<nav className="inline-flex w-full items-center justify-between border-b-2 border-dotted border-black/10 p-4">
-				<p className="font-mono text-xl">Adhinata.DEV</p>
-				<section className="inline-flex items-center gap-2">
+			<nav className="inline-flex w-full items-center justify-between border-b-2 border-dashed border-black/10 p-4 dark:border-white/20">
+				<p className="font-mono text-xl">
+					Adhinata.
+					<span className="rounded-sm bg-black px-1 text-white dark:bg-white dark:text-black">
+						DEV
+					</span>
+				</p>
+				<section className="inline-flex items-center gap-4">
 					{navLists.map((item) => (
 						<>
 							<Link
-								className="font-sans decoration-teal-400 underline-offset-2 hover:underline"
+								className="font-sans decoration-amber-600 underline-offset-2 hover:underline dark:decoration-amber-400"
 								href={item.href}
 							>
 								{item.name}
 							</Link>
 						</>
 					))}
-					<Button asChild>
-						<Link href={"/about"}>about</Link>
-					</Button>
+					<DarkModeToggle />
 				</section>
 			</nav>
 		</>
