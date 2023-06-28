@@ -1,5 +1,3 @@
-import Navbar from "@/components/molecule/Navbar";
-
 export default function Home() {
   return (
     <>

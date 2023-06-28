@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import "./globals.css";
-import { Inter, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/molecule/Navbar";
 
 export const metadata: Metadata = {
