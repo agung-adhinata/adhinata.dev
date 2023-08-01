@@ -17,7 +17,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['PT Sans', ...fontFamily.sans],
-        mono: ['JetBrains Mono', ...fontFamily.mono]
+        mono: ['JetBrains Mono Variable', ...fontFamily.mono]
       }
     },
   },
