@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import "@fontsource-variable/jetbrains-mono"
 import "./globals.css";
 import Navbar from "@/components/molecule/Navbar";
 
@@ -13,9 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="transition-colors">
-        <div className="flex min-h-screen min-w-full flex-col items-center justify-stretch">
-          <section className="flex min-h-screen w-full max-w-full flex-col md:max-w-(--breakpoint-md)">
+      <body className="min-h-screen min-w-screen transition-colors">
+        <div className="absolute flex h-full w-full flex-col items-center justify-stretch overflow-auto">
+          <section className="flex h-full w-full flex-col md:max-w-2xl">
             <Navbar />
             {children}
           </section>

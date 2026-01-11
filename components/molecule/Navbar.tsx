@@ -13,7 +13,6 @@ export default function Navbar() {
         <MyLogo />
         <section className="inline-flex items-center gap-4">
           {navLists.map((item, key) => (
-            <>
               <Link
                 key={key}
                 className="font-sans decoration-amber-600 underline-offset-2 hover:underline dark:decoration-amber-400"
@@ -21,7 +20,6 @@ export default function Navbar() {
               >
                 {item.name}
               </Link>
-            </>
           ))}
           <DarkModeToggle />
         </section>
