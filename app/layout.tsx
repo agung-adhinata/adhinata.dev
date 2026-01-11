@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="transition-colors">
         <div className="flex min-h-screen min-w-full flex-col items-center justify-stretch">
-          <section className="flex min-h-screen w-full max-w-full flex-col md:max-w-screen-md">
+          <section className="flex min-h-screen w-full max-w-full flex-col md:max-w-(--breakpoint-md)">
             <Navbar />
             {children}
           </section>

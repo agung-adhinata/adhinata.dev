@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <main className="flex h-full flex-grow flex-col gap-10 ">
+      <main className="flex h-full grow flex-col gap-10 ">
         <section className="flex h-52 min-h-full flex-col items-center justify-center">
           <h1 className="font-mono text-2xl">AGUNG ADHINATA</h1>
           <p className="">Dev | React | Kotlin</p>
