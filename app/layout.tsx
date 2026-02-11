@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import "@fontsource-variable/jetbrains-mono"
+import "@fontsource-variable/jetbrains-mono";
 import "./globals.css";
 import Navbar from "@/components/molecule/Navbar";
 
@@ -21,6 +21,11 @@ export default function RootLayout({
             {children}
           </section>
         </div>
+        <script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          async
+          defer
+        ></script>
       </body>
     </html>
   );
