@@ -10,8 +10,10 @@ import {
 	RiLoader4Line,
 } from "react-icons/ri";
 
+type ThemeSelector = undefined | "dark" | "light"
+
 function useTheme() {
-	const [theme, setTheme] = useState<string>("loading");
+	const [theme, setTheme] = useState<ThemeSelector>(undefined);
 	const toggleTheme = () => {
 		if (theme === "dark") {
 			setTheme("light");
@@ -42,7 +44,7 @@ export default function DarkModeToggle() {
 
 	return (
 		<Button onClick={toggleTheme} size={"icon"}>
-			{theme === "loading" ? (
+			{theme === undefined ? (
 				<RiLoader4Line className="animate-spin" />
 			) : theme === "light" ? (
 				<RiSunLine />

@@ -16,8 +16,8 @@ export default function Home() {
           <p className={"text-justify indent-8"}>
             My objective is to broaden my skills and my experience about
             technology including ecosystem such as creating games and
-            application, understanding about how things work, and to
-            overcome my weakest self to be my best self.
+            application, understanding about how things work, and to overcome my
+            weakest self to be my best self.
           </p>
         </section>
         <section className={"flex flex-col"}>
@@ -36,8 +36,12 @@ export default function Home() {
           </ul>
         </section>
       </main>
-      <footer className="rounded-tl-md rounded-tr-md bg-black p-4 text-white">
-        <p>Footer</p>
+      <footer className="flex rounded-tl-md rounded-tr-md bg-black p-4 text-white">
+        <div className="flex w-full items-center justify-center">
+          <p>
+            &copy; 2022 - Now | <strong>Agung Adhinata</strong>{" "}
+          </p>
+        </div>
       </footer>
     </div>
   );
