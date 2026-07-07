@@ -1,10 +1,10 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import "../styles/global.css";
+import "@/styles/global.css";
 import type { ImageMetadata } from "astro";
-import FallbackImage from "../assets/blog-placeholder-1.jpg";
-import { SITE_TITLE } from "../consts";
+import FallbackImage from "@/assets/blog-placeholder-1.jpg";
+import { SITE_TITLE } from "@/consts";
 
 interface Props {
 	title: string;
@@ -68,10 +68,19 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
 
+<script is:inline>
+	// FOUC fix, key theme is used
+	const localStorageTheme = localStorage.getItem("theme")
+    document.documentElement.classList.toggle(
+		"dark",
+        localStorageTheme === "dark" ||
+        (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
+    );
+</script>
+
 <!-- listen to dark mode changes -->
 <script>
 	import { appthemeDarkMode } from "@/utils/darkmode-handler";
-	appthemeDarkMode.syncDarkMode()
 	window.addEventListener("storage", () => {
 		appthemeDarkMode.syncDarkMode()
 	});

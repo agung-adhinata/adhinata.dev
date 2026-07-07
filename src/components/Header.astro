@@ -5,10 +5,10 @@ import { DarkModeToggle } from "./react/DarkModeToggle";
 ---
 
 <header
-  class="flex flex-row w-full sticky top-0 bg-white/70 dark:bg-black/70 p-2 backdrop-blur-xl"
+  class="flex flex-row w-full sticky top-0 bg-white/70 dark:bg-neutral-900/70 p-2 backdrop-blur-xl"
 >
   <nav class="flex grow items-center relative justify-center min-h-10">
-    <section class="absolute left-0 top-0 bottom-0 flex">
+    <section class="absolute left-0 top-0 bottom-0 flex items-center">
       <h2><a href="/">{SITE_TITLE}</a></h2>
     </section>
     <div class="internal-links flex gap-4">
@@ -16,9 +16,8 @@ import { DarkModeToggle } from "./react/DarkModeToggle";
       <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink>
     </div>
-    <section class="flex gap-2 absolute right-0 top-0 bottom-0">
+    <section class="flex items-center gap-2 absolute right-0 top-0 bottom-0">
       <DarkModeToggle client:only="react"/>
-      <p>test</p>
     </section>
   </nav>
 </header>

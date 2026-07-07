@@ -1,5 +1,6 @@
 import { CONST_LC_DARK_MODE_KEY } from "@/constants/dark-mode";
 
+
 function syncDarkMode() {
     const localStorageTheme = localStorage.getItem(CONST_LC_DARK_MODE_KEY)
     console.log("dark mode sync")
@@ -28,7 +29,7 @@ function toggleSystem() {
 }
 
 
-export const appthemeDarkMode ={
+export const appthemeDarkMode = {
     toggleDark,
     toggleLight,
     toggleSystem,

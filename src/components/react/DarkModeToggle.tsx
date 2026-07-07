@@ -52,6 +52,9 @@ export function DarkModeToggle() {
 
         }
     }
+    const setToSystemTheme = () => {
+
+    }
 
     return (
         <button onClick={() => { handleDarkModeToggle() }}>

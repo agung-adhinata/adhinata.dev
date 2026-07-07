@@ -5,7 +5,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
-    @apply bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-50
+    @apply bg-neutral-50 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-50
 }
 
 
