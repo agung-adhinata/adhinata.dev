@@ -2,7 +2,8 @@
 dist/
 # generated types
 .astro/
-
+.next/
+next-env.d.ts
 # dependencies
 node_modules/
 
