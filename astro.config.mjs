@@ -3,7 +3,7 @@
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -23,5 +23,12 @@ export default defineConfig({
                 '@': path.resolve(__dirname, './src'),
             }
         }
-    }
+    },
+    fonts:[
+        {
+            provider: fontProviders.fontsource(),
+            cssVariable: "--font-geist",
+            name: "Geist Sans"
+        }
+    ]
 });

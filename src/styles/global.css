@@ -4,11 +4,16 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+    --font-custom-geist: var(--font-geist), sans-serif;
+    --font-sans: var(--font-geist), sans-serif;
+}
+
 body {
     @apply bg-neutral-50 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-50
 }
 
 
 h1, h2, h2, h4, h5, h6, p, code, strong, em, ul, li, a {
-    @apply text-neutral-900 dark:text-neutral-50
+    @apply text-neutral-900 dark:text-neutral-50 
 }
