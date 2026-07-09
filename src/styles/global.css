@@ -1,19 +1,40 @@
-@import 'material-symbols/outlined.css';
+@import "material-symbols/outlined.css";
+@import "@fontsource/geist-sans/100.css";
+@import "@fontsource/geist-sans/200.css";
+@import "@fontsource/geist-sans/300.css";
+@import "@fontsource/geist-sans/400.css";
+@import "@fontsource/geist-sans/500.css";
+@import "@fontsource/geist-sans/600.css";
+@import "@fontsource/geist-sans/700.css";
+@import "@fontsource/geist-sans/800.css";
+@import "@fontsource/geist-sans/900.css";
+@import "@fontsource-variable/jetbrains-mono/wght.css";
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --font-custom-geist: var(--font-geist), sans-serif;
-    --font-sans: var(--font-geist), sans-serif;
+  --font-sans: var(--font-geist), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
 }
 
 body {
-    @apply bg-neutral-50 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-50
+  @apply bg-neutral-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-50;
 }
 
-
-h1, h2, h2, h4, h5, h6, p, code, strong, em, ul, li, a {
-    @apply text-neutral-900 dark:text-neutral-50 
+h1,
+h2,
+h2,
+h4,
+h5,
+h6,
+p,
+code,
+strong,
+em,
+ul,
+li,
+a {
+  @apply text-neutral-900 dark:text-neutral-50;
 }

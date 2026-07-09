@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig, fontProviders } from "astro/config";
 import path from "node:path";
-import { fileURLToPath } from "node:url"; 
+import { fileURLToPath } from "node:url";
 
 import react from "@astrojs/react";
 
@@ -26,9 +26,16 @@ export default defineConfig({
   },
   fonts: [
     {
-      provider: fontProviders.fontsource(),
-      cssVariable: "--font-geist",
       name: "Geist Sans",
+      cssVariable: "--font-geist",
+      provider: fontProviders.fontsource(),
+      fallbacks: ["sans-serif"],
+    },
+    {
+      name: "JetBrains Mono",
+      cssVariable: "--font-jetbrains-mono",
+      provider: fontProviders.fontsource(),
+      fallbacks: ["monospace"],
     },
   ],
   markdown: {
