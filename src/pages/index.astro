@@ -1,34 +1,27 @@
 ---
 import { appthemeDarkMode } from "@/utils/darkmode-handler";
-import BaseHead from "@/components/raw/Head.astro";
+import BaseHead from "@/components/raw/HeadContent.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import MainLayout from "@/layouts/MainLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body
-    class="bg-neutral-50 h-screen flex flex-col items-center dark:bg-neutral-900 text-neutral-800 dark:text-neutral-50"
-  >
-    <Header />
-    <main class="prose grow flex flex-col w-full max-w-2xl px-8">
-      <span class="flex w-full justify-center">
-        <h1 class="font-custom-geist">Agung Adhinata</h1>
-      </span>
-      <h2 class="mt-0">Android & React Native Developer | OSM Contributor</h2>
-      <p>Hi, my name is Agung Adhinata, I'm self taught developer.</p>
-      <p>
-        This is my personal website that include my portofoio, project, and
-        personal blog.
-      </p>
-      <p>
-        You can access it from the navigation bar above or from my own overview
-      </p>
-    </main>
-    <Footer />
-  </body>
-</html>
+<MainLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <Header />
+  <main class="prose grow flex flex-col w-full max-w-2xl px-8">
+    <span class="flex w-full justify-center">
+      <h1 class="font-custom-geist">Agung Adhinata</h1>
+    </span>
+    <h2 class="mt-0">Android & React Native Developer | OSM Contributor</h2>
+    <p>Hi, my name is Agung Adhinata, I'm self taught developer.</p>
+    <p>
+      This is my personal website that include my portofoio, project, and
+      personal blog.
+    </p>
+    <p>
+      You can access it from the navigation bar above or from my own overview
+    </p>
+  </main>
+  <Footer />
+</MainLayout>

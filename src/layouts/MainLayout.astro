@@ -1,0 +1,22 @@
+---
+import HeadContent from "@/components/raw/HeadContent.astro";
+
+type Props = {
+  title: string;
+  description: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <HeadContent title={title} description={description} />
+  </head>
+  <body
+    class="flex min-h-screen flex-col items-center bg-neutral-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-50"
+  >
+    <slot />
+  </body>
+</html>

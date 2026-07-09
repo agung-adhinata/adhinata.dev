@@ -127,6 +127,16 @@ we can use 3 backticks ``` in new line and write snippet and close with 3 backti
 </html>
 ```
 
+another one:
+
+```js
+// JavaScript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l);
+  return true;
+};
+```
+
 ## List Types
 
 ### Ordered List
