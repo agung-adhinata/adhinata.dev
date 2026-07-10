@@ -6,18 +6,19 @@ import HeaderIcon from "./react/HeaderIcon";
 ---
 
 <header
-  class="sticky top-0 flex w-full flex-row bg-white/70 p-2 backdrop-blur-xl dark:bg-neutral-900/70 border-b-2 "
+  class="sticky top-0 flex w-full flex-row border-b-2 bg-white/70 p-2 backdrop-blur-xl transition-colors dark:bg-neutral-900/70"
 >
   <nav class="relative flex min-h-10 grow items-center justify-center">
     <section class="absolute top-0 bottom-0 left-0 flex items-center gap-4">
-      <HeaderIcon client:load/>
+      <HeaderIcon client:load />
       <!-- <HeaderLink href="/">Home</HeaderLink> -->
-      <HeaderLink  href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink>
     </section>
-    <div class="flex gap-4">
-    </div>
-    <section class="absolute top-0 right-0 bottom-0 flex items-center gap-2">
+    <div class="flex gap-4"></div>
+    <section
+      class="absolute top-0 right-0 bottom-0 flex items-center justify-center gap-2"
+    >
       <DarkModeToggle client:only="react" />
     </section>
   </nav>
