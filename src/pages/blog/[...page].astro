@@ -1,0 +1,73 @@
+---
+import Footer from "@/components/Footer.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
+import Header from "@/components/Header.astro";
+import HeadContent from "@/components/raw/HeadContent.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
+import type { GetStaticPaths } from "astro";
+import Image from "astro/components/Image.astro";
+import { getCollection } from "astro:content";
+export const getStaticPaths = (async ({ paginate }) => {
+  const blogEntries = (await getCollection("blog")).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  );
+
+  // Generate pages from our array of astronauts, with 2 to a page
+  return paginate(blogEntries, { pageSize: 5 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <HeadContent title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section class="flex w-full flex-col items-center justify-center">
+        <ul class="flex w-full flex-col items-center gap-4 lg:w-3xl">
+          {
+            page.data.map((post) => (
+              <li class="flex w-full p-4">
+                <a class="flex w-full gap-4" href={`/blog/${post.id}/`}>
+                  {post.data.heroImage && (
+                    <Image
+                      width={360}
+                      src={post.data.heroImage}
+                      loading={"eager"}
+                      alt=""
+                      class="rounded-2xl"
+                    />
+                  )}
+                  <div class="grow">
+                    <h4 class="text-2xl font-semibold">{post.data.title}</h4>
+                    <p class="date">
+                      <FormattedDate date={post.data.pubDate} />
+                    </p>
+                  </div>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+      <section class="flex w-full flex-col items-center justify-center">
+        <div class="flex flex-row gap-2">
+          <p>Page</p>
+          <p>{page.currentPage}</p>
+        </div>
+
+        <div class="flex w-full items-center justify-center gap-4">
+          {page.url.first ? <a href={page.url.first}>First</a> : null}
+          {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
+          {page.url.next ? <a href={page.url.next}>Next</a> : null}
+          {page.url.last ? <a href={page.url.last}>Last</a> : null}
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
