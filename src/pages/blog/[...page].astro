@@ -24,10 +24,10 @@ const { page } = Astro.props;
   <head>
     <HeadContent title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body class="flex flex-col min-h-screen">
     <Header />
-    <main>
-      <section class="flex w-full flex-col items-center justify-center">
+    <main class="grow flex flex-col">
+      <section class="flex w-full grow flex-col items-center justify-start">
         <ul class="flex w-full flex-col items-center gap-4 lg:w-3xl">
           {
             page.data.map((post) => (
@@ -58,13 +58,38 @@ const { page } = Astro.props;
         <div class="flex flex-row gap-2">
           <p>Page</p>
           <p>{page.currentPage}</p>
+          <p>of {Math.ceil(page.lastPage)}</p>
         </div>
 
         <div class="flex w-full items-center justify-center gap-4">
-          {page.url.first ? <a href={page.url.first}>First</a> : null}
-          {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
-          {page.url.next ? <a href={page.url.next}>Next</a> : null}
-          {page.url.last ? <a href={page.url.last}>Last</a> : null}
+          {
+            page.url.first ? (
+              <a href={page.url.first}>First</a>
+            ) : (
+              <p class="opacity-50">First</p>
+            )
+          }
+          {
+            page.url.prev ? (
+              <a href={page.url.prev}>Previous</a>
+            ) : (
+              <p class="opacity-50">Previous</p>
+            )
+          }
+          {
+            page.url.next ? (
+              <a href={page.url.next}>Next</a>
+            ) : (
+              <p class="opacity-50">Next</p>
+            )
+          }
+          {
+            page.url.last ? (
+              <a href={page.url.last}>Last</a>
+            ) : (
+              <p class="opacity-50">Last</p>
+            )
+          }
         </div>
       </section>
     </main>
