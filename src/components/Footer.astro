@@ -1,0 +1,35 @@
+---
+const today = new Date();
+---
+
+<footer transition:persist
+  class="flex w-full flex-col items-center bg-neutral-200 transition-colors duration-500 dark:bg-neutral-700"
+>
+  <section
+    class="flex w-full grow justify-center border-t-[0.5px] border-neutral-200 bg-neutral-100 px-8 py-2 transition-colors duration-300 dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <span class="flex max-w-4xl grow">
+      <div class="flex flex-col opacity-80">
+        <p>Privacy Policy</p>
+        <p>Klocation</p>
+      </div>
+      <div class="grow"></div>
+    </span>
+  </section>
+  <section class="flex w-full max-w-4xl justify-between px-8 py-8">
+    <div class="flex items-end gap-6">
+      <img src="/favicon2.svg" class="size-8" alt="icon" />
+      <div class="flex flex-col">
+        <p class="font-mono text-xs opacity-30">NEKKIICHI - LITHINUX - NE__.</p>
+        <p
+          class="flex items-center gap-4 p-0 font-mono leading-none opacity-80"
+        >
+          <strong>
+            &copy; {today.getFullYear()} Adhinata.DEV.
+          </strong>
+          <span class="text-sm font-light">All rights reserved.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+</footer>

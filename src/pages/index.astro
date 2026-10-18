@@ -1,0 +1,29 @@
+---
+import { appthemeDarkMode } from "@/utils/darkmode-handler";
+import BaseHead from "@/components/raw/HeadContent.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import MainLayout from "@/layouts/MainLayout.astro";
+---
+
+<MainLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <Header />
+  <main class=" h-full items-center justify-center grow flex flex-col w-full max-w-2xl px-8">
+    <section class="prose dark:prose-invert">
+      <span class="flex w-full justify-center">
+        <h1 class="mb-4">Agung Adhinata</h1>
+      </span>
+      <h2 class="mt-0">Android & React Native Developer | OSM Contributor</h2>
+      <p>Hi, my name is Agung Adhinata, I'm self taught developer.</p>
+      <p>
+        This is my personal website that include my portofoio, project, and
+        personal blog.
+      </p>
+      <p>
+        You can access it from the navigation bar above or from my own overview
+      </p>
+    </section>
+  </main>
+  <Footer />
+</MainLayout>

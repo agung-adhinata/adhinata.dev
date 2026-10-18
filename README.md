@@ -1,22 +1,62 @@
-# 🌐 Adhinata.DEV Website 🌐
+# Astro Starter Kit: Blog
 
-<div align="center">
+```sh
+bun create astro@latest -- --template blog
+```
 
-![Header Image](https://i.imgur.com/i1unIKO.png)
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-</div>
+Features:
 
-This section includes about all of the things that related to this website project.
+- ✅ Minimal styling (make it your own!)
+- ✅ 100/100 Lighthouse performance
+- ✅ SEO-friendly with canonical URLs and OpenGraph data
+- ✅ Sitemap support
+- ✅ RSS Feed support
+- ✅ Markdown & MDX support
 
-## Web and Domain Design Goals
+## 🚀 Project Structure
 
-This website is designed to provide two things, as my **playground** for create my own apps, and creating a good **personal web** at `adhinata.dev` that can be accessible to anyone who wants to know about me.
+Inside of your Astro project, you'll see the following folders and files:
 
-## Technology behind my personal web
+```text
+├── public/
+├── src/
+│   ├── components/
+│   ├── content/
+│   ├── layouts/
+│   └── pages/
+├── astro.config.mjs
+├── README.md
+├── package.json
+└── tsconfig.json
+```
 
--   Frontend:
-    -   Next JS -> js metaframework, for frontend, SEO, and built-in Router
-    -   Tailwindcss -> styling
-    -   Radix -> for accessibility and the faster way to create polymorph component
--   Back End :
-    -   Vercel
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `bun install`             | Installs dependencies                            |
+| `bun dev`             | Starts local dev server at `localhost:4321`      |
+| `bun build`           | Build your production site to `./dist/`          |
+| `bun preview`         | Preview your build locally, before deploying     |
+| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `bun astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Credit
+
+This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).

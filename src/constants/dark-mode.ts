@@ -1,0 +1,1 @@
+export const CONST_LC_DARK_MODE_KEY = "theme"
