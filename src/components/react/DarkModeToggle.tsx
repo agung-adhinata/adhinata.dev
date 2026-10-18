@@ -37,15 +37,19 @@ function useLocalStorageDarkMode() {
   return [data, setData] as const;
 }
 
+const SYSTEM_ICON = "monitor"
+const SYSTEM_DISABLED_ICON = "desktop_access_disabled"
+const LIGHT_ICON = "light_mode"
+const DARK_ICON = "dark_mode"
 export function DarkModeToggle() {
   const [darkMode, setDarkMode] = useLocalStorageDarkMode();
 
   const isSystem = darkMode != null;
   const iconCode = !isSystem
-    ? "monitor"
+    ? SYSTEM_DISABLED_ICON
     : darkMode == "light"
-      ? "light_mode"
-      : "dark_mode";
+      ? LIGHT_ICON
+      : DARK_ICON;
 
   const handleDarkModeToggle = () => {
     console.log("test");
@@ -84,7 +88,7 @@ export function DarkModeToggle() {
           }}
         >
           <span className="material-symbols-outlined size-6 cursor-pointer select-none">
-            monitor
+            {SYSTEM_ICON}
           </span>
         </button>
       </VisibleContainer>
