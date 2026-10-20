@@ -3,7 +3,12 @@ import { getCollection } from "astro:content";
 import type { GetStaticPaths } from "astro";
 import { Image } from "astro:assets";
 import FormattedDate from "@/components/FormattedDate.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
+import NoticeBanner from "@/components/NoticeBanner.astro";
+import {
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  BLOG_USES_SAMPLE_DATA,
+} from "@/consts";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 export const getStaticPaths = (async ({ paginate }) => {
@@ -23,6 +28,18 @@ const { page } = Astro.props;
   mainClass="py-8"
 >
   <section class="flex w-full grow flex-col items-center justify-start">
+    {
+      BLOG_USES_SAMPLE_DATA && (
+        <div class="mb-4 w-full px-4 lg:w-3xl lg:px-0">
+          <NoticeBanner
+            variant="construction"
+            title="In construction"
+          >
+            Sample content only, will replace soon...
+          </NoticeBanner>
+        </div>
+      )
+    }
     <ul class="flex w-full flex-col items-center gap-4 lg:w-3xl">
       {
         page.data.map((post) => (

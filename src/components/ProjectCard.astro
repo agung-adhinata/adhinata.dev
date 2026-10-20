@@ -8,13 +8,14 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<article class="not-prose group flex flex-col gap-3 rounded-none border border-neutral-200 bg-white/60 p-5 transition-all duration-200 hover:border-amber-500/60 hover:shadow-sm dark:border-neutral-800 dark:bg-neutral-900/60 dark:hover:border-amber-400/60">
+<article class="not-prose group flex flex-col gap-3 rounded-none border border-neutral-200 dark:border-neutral-700 bg-white/60 p-5 transition-all duration-200 dark:bg-neutral-900/60">
   <div class="flex flex-wrap items-baseline justify-between gap-2">
     <div class="flex flex-wrap items-center gap-2">
       <h3 class="text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
         {project.title}
       </h3>
-      <span class="rounded-md bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-700 dark:bg-amber-400/10 dark:text-amber-300">
+      <!-- year -->
+      <span class="rounded-md px-2 py-0.5 text-sm font-medium text-amber-700 dark:bg-amber-400/10 dark:text-amber-300">
         {project.year}
       </span>
     </div>
@@ -23,7 +24,7 @@ const { project } = Astro.props;
     </span>
   </div>
 
-  <p class="text-xs italic text-neutral-500 dark:text-neutral-400">
+  <p class="text-xs  text-neutral-500/80 dark:text-neutral-400/80">
     {project.collaboration}
   </p>
 

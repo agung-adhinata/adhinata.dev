@@ -1,0 +1,60 @@
+---
+interface Props {
+  variant?: "info" | "warning" | "construction";
+  title?: string;
+  /** Material Symbols icon name. Defaults to the variant icon. */
+  icon?: string;
+  /** Extra classes for the banner wrapper. */
+  class?: string;
+}
+
+const { variant = "info", title, icon, class: className } = Astro.props;
+
+const PRESETS = {
+  info: {
+    icon: "info",
+    classes:
+      "border-neutral-200 bg-neutral-100 text-neutral-700 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-300",
+    iconClasses: "text-neutral-500 dark:text-neutral-400",
+  },
+  warning: {
+    icon: "warning",
+    classes:
+      "border-red-500/30 bg-red-500/10 text-red-900 dark:border-red-400/30 dark:bg-red-400/10 dark:text-red-100",
+    iconClasses: "text-red-600 dark:text-red-400",
+  },
+  construction: {
+    icon: "construction",
+    classes:
+      "border-amber-500/40 bg-amber-500/10 text-amber-900 dark:border-amber-400/30 dark:bg-amber-400/10 dark:text-amber-100",
+    iconClasses: "text-amber-600 dark:text-amber-400",
+  },
+} as const;
+
+const preset = PRESETS[variant];
+---
+
+<aside
+  role="note"
+  class:list={[
+    "not-prose flex  gap-3 rounded-none px-4 py-3",
+    preset.classes,
+    className,
+  ]}
+>
+  <span
+    class:list={[
+      "material-symbols-outlined shrink-0 text-xl leading-6",
+      preset.iconClasses,
+    ]}
+    aria-hidden="true"
+  >
+    {icon ?? preset.icon}
+  </span>
+  <div class="min-w-0">
+    {title && <p class="mb-0.5 font-semibold">{title}</p>}
+    <div class="text-sm leading-relaxed">
+      <slot />
+    </div>
+  </div>
+</aside>
