@@ -1,0 +1,47 @@
+---
+// The single document shell for the whole site.
+// Every page must render through this layout (directly or via another layout).
+import type { ImageMetadata } from "astro";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import HeadContent from "./HeadContent.astro";
+import "@/styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  /** Image used for Open Graph / Twitter cards. */
+  image?: ImageMetadata;
+  /** Extra classes for <body>. */
+  bodyClass?: string;
+  /** Extra classes for <main>. */
+  mainClass?: string;
+}
+
+const { title, description, image, bodyClass, mainClass } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <HeadContent title={title} description={description} image={image} />
+    <slot name="head" />
+  </head>
+  <body
+    class:list={[
+      "flex min-h-screen flex-col items-center",
+      bodyClass,
+    ]}
+  >
+    <Header />
+    <main
+      class:list={[
+        "flex w-full grow flex-col items-center",
+        mainClass,
+      ]}
+    >
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
